@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Get Data</title>
+    <script src="http://192.168.0.155:3010/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div id="results">This text will change</div>
+    <div id="date">sample another temp text</div>
+    <script>
+      // client code here
+      var socket = io.connect("http://192.168.0.155:3010");
+      socket.on("udp message", function (message) {
+        console.log(message);
+        document.getElementById("date").innerHTML = "My new text!";
+      });
+      socket.on("welcome", function (data) {
+        document.getElementById("results").innerHTML = data.message;
+      });
+    </script>
+  </body>
+</html>

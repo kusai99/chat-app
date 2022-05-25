@@ -1,0 +1,46 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "hcfd",
+      "request": "launch",
+      "type": "dart"
+    },
+
+    {
+      "name": "myPhone",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "R58R51LAR3R"
+    },
+
+    {
+      "name": "Chrome",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "chrome"
+    },
+    {
+      "name": "Edge",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "edge"
+    },
+
+    {
+      "name": "hcfd (release mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "All devices",
+      "configurations": ["myPhone", "Edge"]
+    }
+  ]
+}
